@@ -1,0 +1,169 @@
+/*declared variables*/
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --brightGreen: hsl(71, 73%, 54%);
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --brightGreenH: hsl(71, 73%, 74%);
+    --lighterCyan: hsl(179, 60%, 46%);
+    --grayWhite: hsl(179, 80%, 73%);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--lightGray);
+    font-family: 'Karla';
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.container {
+  width: 20em;
+  border-radius: 0.5em;
+  box-shadow: 2px 5px 35px var(--grayishBlue);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.7fr 1fr;
+  grid-template-areas: 
+  "join"
+  "subscription" 
+  "why-us";
+}
+
+#join {
+  background-color: var(--white);
+  color: var(--grayishBlue);
+  line-height: 1.5em;
+  grid-area: join;
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+#subscription {
+	background-color: var(--cyan);
+	color: var(--white);
+	grid-area: subscription;
+}
+
+#why-us {
+  background-color: var(--lighterCyan);
+  color: var(--white);
+  grid-area: why-us;
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+section {
+  padding: 2em 1.5em;
+}
+
+.section-subject {
+  font-size: 1.25rem;
+  margin: 0 0 1em 0;
+}
+
+/*#join .section-subject{
+	color: var(--lighterCyan);
+}*/
+
+.sub-heading {
+  font-size: 1.1rem;
+  margin: 0 0 1em 0;
+  color: var(--brightGreen);
+}
+
+.content {
+  font-size: 0.9rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.price span:nth-child(1) {
+  font-size: 2.25rem;
+}
+
+.price span:nth-child(2) {
+  color: var(--grayWhite);
+  margin: 0 0 0 1em;
+  font-weight: 300;
+}
+
+.btn {
+  margin: 0.75em 0;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 1px solid var(--brightGreen);
+  background-color: var(--brightGreen);
+  color: var(--white);
+  font-weight: 600;
+  box-shadow: 2px 5px 10px var(--lighterCyan);
+}
+
+.btn:hover {
+  background-color: var(--brightGreenH);
+}
+
+#why-us ul {
+  list-style:none;
+  color: var(--lightGray);
+}
+
+#why-us ul li {
+  margin: 0.25em 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .container {
+    width: 50em;
+  }
+
+  #subscription {
+    border-radius: 0 0 0 0.5em;
+  }
+
+  #why-us {
+    border-radius: 0 0 0.5em 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    grid-template-areas: 
+    "join join"
+    "subscription why-us";
+  }
+
+  .btn {
+    margin: 1.5em 0;
+  }
+}
