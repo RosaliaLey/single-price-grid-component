@@ -12,13 +12,13 @@
 }
 
 * {
-    padding: 0;
-    margin: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--lightGray);
-    font-family: 'Karla';
+  background-color: var(--lightGray);
+  font-family: 'Karla';
 }
 
 main {
@@ -53,9 +53,9 @@ main {
 }
 
 #subscription {
-	background-color: var(--cyan);
-	color: var(--white);
-	grid-area: subscription;
+  background-color: var(--cyan);
+  color: var(--white);
+  grid-area: subscription;
 }
 
 #why-us {
@@ -73,10 +73,6 @@ section {
   font-size: 1.25rem;
   margin: 0 0 1em 0;
 }
-
-/*#join .section-subject{
-	color: var(--lighterCyan);
-}*/
 
 .sub-heading {
   font-size: 1.1rem;
